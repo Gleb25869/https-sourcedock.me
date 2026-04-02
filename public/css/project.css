@@ -12,6 +12,7 @@
   margin-left: 20px;
   border-top-left-radius: 11px;
   border-top-right-radius: 11px;
+  display: inline-block;
 }
 
 .card img {
