@@ -590,3 +590,158 @@ footer a:hover {
     font-size: 11px;
   }
 }
+
+.footer {
+  position: relative;
+  background: radial-gradient(circle at left bottom, #5f2bff33, transparent 40%), #0b0b0f;
+  color: #fff;
+  padding: 100px 60px 40px;
+  overflow: hidden;
+}
+
+/* точки */
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 14px 14px;
+  opacity: 0.2;
+}
+
+/* огромный текст */
+.footer::after {
+  content: 'SourceDock';
+  position: absolute;
+  bottom: -40px;
+  left: 60px;
+  font-size: 220px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+/* контейнер */
+.footer-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 80px;
+}
+
+/* левая часть */
+.footer-left {
+  max-width: 400px;
+}
+
+/* email glow */
+.email {
+  font-size: 32px;
+  margin: 20px 0;
+  position: relative;
+}
+
+.email::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  mix-blend-mode: overlay;
+}
+
+/* ссылки */
+.footer-links a {
+  display: block;
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* колонки */
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-title {
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.col a {
+  color: #bbb;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.col a:hover {
+  color: #fff;
+}
+
+/* низ */
+.footer-bottom {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: #777;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 80px 40px 30px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .footer::after {
+    font-size: 140px;
+    left: 20px;
+  }
+}
+
+/* мобилка */
+@media (max-width: 600px) {
+  .footer {
+    padding: 60px 20px 30px;
+  }
+
+  .email {
+    font-size: 22px;
+  }
+
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .footer::after {
+    font-size: 90px;
+    bottom: -20px;
+  }
+}

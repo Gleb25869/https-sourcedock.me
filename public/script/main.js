@@ -1,8 +1,7 @@
- 
-
 const MYPROJECTHEADER = document.getElementById('my-project-header');
 const CARDITEM = document.getElementById('item');
 const MIT = document.getElementById('MITLicense');
+const ProxyTG = document.getElementById('proxy-telegram');
 
 MYPROJECTHEADER.addEventListener('click', () => {
   alert('Произошла ошибка, проекты еще на работе ❤️');
@@ -30,4 +29,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.`);
+});
+
+ProxyTG.addEventListener('click', () => {
+  alert('tg://proxy?server=178.154.199.119&port=443&secret=470d380b9edcc756e4623d2b4cfebf47');
 });
